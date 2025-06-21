@@ -6,3 +6,4 @@ if [[ -d /home/mint/git-test ]]; then
 else
 	echo "Нет папки"
 fi
+dchffffff
