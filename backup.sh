@@ -1,9 +1,9 @@
-DATE=$(date +"%Y-%m-%d")
-FILENAME="backup-$DATE.tar.gz"
-if [[ -d /home/mint/git-test ]]; then
-	mkdir -p directory
-	tar -czf /home/mint/Desktop/"$FILENAME" /home/mint/git-test 
+DATE=$(date +"%Y-%m-%d_%H-%M")
+FILENAME="backup-$DATE"
+if [[ -d ~/backups ]]; then
+	 cp -r ~/important ~/backups/"$FILENAME" 
 else
-	echo "Нет папки"
+	mkdir -p ~/backups
+	cp -r ~/important ~/backups/"$FILENAME"
 fi
-dchffffff
+
